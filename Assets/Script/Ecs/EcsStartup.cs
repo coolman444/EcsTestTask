@@ -24,8 +24,7 @@ namespace Script.Ecs
             _ecsFixedUpdateSystems = new EcsSystems(_world);
             _ecsFixedUpdateSystems
                 .Add (new MoveTowardsSystem(timeService))
-                .Add (new CollisionDetectSystem(collisionService))
-                .Add (new CollisionHandleSystem())
+                .Add (new TrackingSystem(collisionService))
                 .Add (new ActiveDependantsSystem())
                 .Add (new ActiveDoorSystem())
 #if UNITY_EDITOR

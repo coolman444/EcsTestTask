@@ -14,27 +14,30 @@ namespace Script.Ecs.Systems
             var activePool = world.GetPool<Active>();
             var destinationPointPool = world.GetPool<DestinationPoint>();
             var originalPositionPool = world.GetPool<OriginalPosition>();
+            var rotationPool = world.GetPool<Rotation>();
             var velocityPool = world.GetPool<Velocity>();
             
             var activeFilter = world
                 .Filter<Active>()
                 .Inc<OriginalPosition>()
                 .Inc<Position>()
+                .Inc<Rotation>()
                 .Inc<Script.Ecs.Components.Door>()
                 .End();
             
             foreach (var entity in activeFilter)
             {
                 var door = doorPool.Get(entity);
+                var forward = (Quaternion.Euler(0, rotationPool.Get(entity).Value, 0) * Vector3.forward);
                 var targetPosition = 
-                    originalPositionPool.Get(entity).Value + Vector3.forward * doorPool.Get(entity).OpenDistance;  
+                    originalPositionPool.Get(entity).Value + forward * doorPool.Get(entity).OpenDistance;  
                 if (Vector3.Distance(positionPool.Get(entity).Value, targetPosition) < 0.01f)
                 {
                     activePool.Del(entity);
                     continue;
                 }
                 
-                velocityPool.GetOrAdd(entity).Value = Vector3.forward * door.Speed;
+                velocityPool.GetOrAdd(entity).Value = forward * door.Speed;
                 destinationPointPool.GetOrAdd(entity).Value = targetPosition;
             }
             
