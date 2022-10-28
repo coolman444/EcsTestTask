@@ -14,11 +14,14 @@ namespace Script.Ecs
         [SerializeField]
         private LayerMask _groundLayers; 
 
+        [SerializeField]
+        private float _collisionGridCellSize = 5;
+        
         public EcsWorld World => _world;
 
         private void Awake()
         {
-            var collisionService = new CollisionService();
+            var collisionService = new CollisionService(_collisionGridCellSize);
             var timeService = new TimeService();
             _world = new EcsWorld();
             _ecsFixedUpdateSystems = new EcsSystems(_world);
