@@ -51,7 +51,6 @@ namespace Script
             if (Mathf.Abs(rotateAngle) < _moveAngle)
             {
                 _animator.SetFloat(Speed, 1, 0.2f, Time.deltaTime);
-                Vector3.MoveTowards(transform.position, Destination, _linearSpeed * Time.deltaTime * _animator.GetFloat(Speed));
                 transform.Translate(transform.forward * _linearSpeed * Time.deltaTime * _animator.GetFloat(Speed), Space.World);
             }
             else

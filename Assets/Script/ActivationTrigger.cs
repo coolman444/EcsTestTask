@@ -14,7 +14,6 @@ namespace Script
         {
             if (++_count == 1)
             {
-                Debug.Log("Trigger activated");
                 OnActivate?.Invoke();
             }
         }
@@ -23,7 +22,6 @@ namespace Script
         {
             if (--_count == 0)
             {
-                Debug.Log("Trigger deactivated");
                 OnDeactivate?.Invoke();
             }
         }
