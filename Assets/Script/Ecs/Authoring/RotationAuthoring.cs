@@ -1,6 +1,6 @@
 ﻿using Script.Ecs.Components;
 
-namespace Script.Authoring
+namespace Script.Ecs.Authoring
 {
     public class RotationAuthoring : BaseAuthoring<Rotation>
     {

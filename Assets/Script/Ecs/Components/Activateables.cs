@@ -1,5 +1,4 @@
 ﻿using System;
-using Script.Authoring;
 
 namespace Script.Ecs.Components
 {

@@ -1,6 +1,6 @@
 ﻿using Leopotam.EcsLite;
 
-namespace Script.Authoring
+namespace Script.Ecs
 {
     public interface IAuthoring
     {

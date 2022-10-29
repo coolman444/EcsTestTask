@@ -2,7 +2,7 @@
 using Leopotam.EcsLite;
 using UnityEngine;
 
-namespace Script.Authoring
+namespace Script.Ecs.Authoring
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(ConvertToEntity))]

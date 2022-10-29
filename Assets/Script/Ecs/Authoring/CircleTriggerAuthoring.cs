@@ -1,6 +1,6 @@
 ﻿using Script.Ecs.Client.Components;
 
-namespace Script.Authoring
+namespace Script.Ecs.Authoring
 {
     public class CircleTriggerAuthoring : BaseAuthoring<CircleTrigger>
     {

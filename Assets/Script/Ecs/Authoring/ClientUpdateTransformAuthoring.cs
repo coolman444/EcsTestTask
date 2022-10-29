@@ -1,7 +1,6 @@
 ﻿using Script.Ecs.Client.Components;
-using Script.Ecs.Components;
 
-namespace Script.Authoring
+namespace Script.Ecs.Authoring
 {
     public class ClientUpdateTransformAuthoring : BaseAuthoring<ClientUpdateTransform>
     {

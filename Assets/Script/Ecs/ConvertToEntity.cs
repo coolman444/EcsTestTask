@@ -2,7 +2,7 @@
 using Script.Ecs.Client.Components;
 using UnityEngine;
 
-namespace Script.Authoring
+namespace Script.Ecs
 {
     [DisallowMultipleComponent]
     public class ConvertToEntity : MonoBehaviour

@@ -1,5 +1,4 @@
 ﻿using Leopotam.EcsLite;
-using Script.Authoring;
 using UnityEngine;
 
 namespace Script.Ecs.Client.Systems
