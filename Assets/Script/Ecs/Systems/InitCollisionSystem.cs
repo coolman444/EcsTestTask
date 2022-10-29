@@ -4,7 +4,7 @@ using Script.Ecs.Components;
 
 namespace Script.Ecs.Systems
 {
-    public class InitCollisionSystem : IEcsInitSystem
+    public class InitCollisionSystem : IEcsRunSystem
     {
         private readonly ICollisionService _collisionService;
         
@@ -13,7 +13,7 @@ namespace Script.Ecs.Systems
             _collisionService = collisionService;
         }
 
-        public void Init(IEcsSystems systems)
+        public void Run(IEcsSystems systems)
         {
             
             var world = systems.GetWorld();

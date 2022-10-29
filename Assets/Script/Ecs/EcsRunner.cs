@@ -17,6 +17,7 @@ namespace Script.Ecs
             _ecsFixedUpdateSystems = new EcsSystems(world);
             _ecsFixedUpdateSystems
                 .DiStart(systemSpawner)
+                .Add<InitCollisionSystem>()
                 .Add<MoveTowardsSystem>()
                 .Add<TrackingSystem>()
                 .Add<ActiveDependantsSystem>()
@@ -32,10 +33,8 @@ namespace Script.Ecs
                 .DiStart(systemSpawner)
                 .Add<ClientInitConvertSystem>()
                 .Add<ClientInputSystem>()
-                .Add<InitCollisionSystem>()
                 .Add<ClientUpdateTransformSystem>()
                 .Add<ClientUpdateAnimatorSystem>()
-                .Add<DestroyEntitySystem>()
                 .DiEnd()
                 .Init();
         }
