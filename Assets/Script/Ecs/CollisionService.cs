@@ -94,8 +94,9 @@ namespace Script.Ecs
 
         private CellCoordinate ToCellCoordinate(Vector3 position)
         {
-            return new CellCoordinate(Mathf.FloorToInt(position.x / _cellSize),
-                Mathf.FloorToInt(position.x / _cellSize));
+            return new CellCoordinate(
+                Mathf.FloorToInt(position.x / _cellSize),
+                Mathf.FloorToInt(position.z / _cellSize));
         }
     }
 }

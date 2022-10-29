@@ -1130,6 +1130,7 @@ MonoBehaviour:
   _groundLayers:
     serializedVersion: 2
     m_Bits: 128
+  _collisionGridCellSize: 2.5
 --- !u!4 &1102304641
 Transform:
   m_ObjectHideFlags: 0
