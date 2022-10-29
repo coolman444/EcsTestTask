@@ -9,9 +9,9 @@ namespace Script.Ecs.Client.Systems
     {
         private readonly int _groundLayers;
         
-        public ClientInputSystem(int groundLayers)
+        public ClientInputSystem(ClientSettings settings)
         {
-            _groundLayers = groundLayers;
+            _groundLayers = settings.GroundLayers;
         }
 
         private readonly InputActions _actions = new ();

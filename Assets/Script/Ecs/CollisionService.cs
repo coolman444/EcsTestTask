@@ -45,9 +45,9 @@ namespace Script.Ecs
         private readonly float _cellSize;
         private readonly Dictionary<CellCoordinate, Cell> _grid = new ();
 
-        public CollisionService(float cellSize)
+        public CollisionService(CollisionServiceSettings settings)
         {
-            _cellSize = cellSize;
+            _cellSize = settings.CollisionGridCellSize;
         }
         
         public bool TryFindCollidedEntity(Vector3 position, out EcsPackedEntity entity)
