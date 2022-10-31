@@ -5,4 +5,5 @@
    - InitCollisionSystem
    - MoveTowardsSystem
    - TrackingSystem
+3. Тестовая сцена - Assets/Scenes/SampleScene.unity
 
