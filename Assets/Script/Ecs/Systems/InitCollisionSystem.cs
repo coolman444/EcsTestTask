@@ -1,5 +1,4 @@
 ﻿using Leopotam.EcsLite;
-using Script.Ecs.Client.Components;
 using Script.Ecs.Components;
 
 namespace Script.Ecs.Systems

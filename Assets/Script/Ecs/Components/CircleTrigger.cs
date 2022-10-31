@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Script.Ecs.Client.Components
+namespace Script.Ecs.Components
 {
     [Serializable]
     public struct CircleTrigger
